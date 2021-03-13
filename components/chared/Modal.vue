@@ -130,13 +130,15 @@ export default {
   @apply justify-center;
   @apply items-center;
   @apply text-3xl;
-  @apply mt-10;
+  @apply mt-16;
 }
 .under-button {
   @apply absolute;
+  @apply bg-green-600;
+  @apply text-white;
   bottom: -30px;
   @apply px-8;
-  @apply py-8;
+  @apply py-2;
   @apply rounded-xl;
   @apply cursor-pointer;
 }

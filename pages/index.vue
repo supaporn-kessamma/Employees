@@ -6,12 +6,12 @@
         <div
           class="inline-block text-xl text-white absolute top-0 right-0 mt-1 px-4 py-2 m-2"
         >
-          <div class="p-1 bg-red-600 rounded-sm inline-block">
+          <div class="p-1 bg-red-600 rounded-sm inline-block cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 2 20 20"
               fill="currentColor"
-              class="h-5 w-5 text-white inline-block"
+              class="h-5 w-5 text-white inline-block cursor-pointer"
             >
               <path
                 fill-rule="evenodd"
@@ -19,11 +19,11 @@
                 clip-rule="evenodd"
               />
             </svg>
-            <label class="inline-block">Delete</label>
+            <label class="inline-block cursor-pointer">Delete</label>
           </div>
 
           <div
-            class="p-1 bg-green-500 rounded-sm inline-block"
+            class="p-1 bg-green-500 rounded-sm inline-block cursor-pointer"
             @click="
               () => {
                 showModal = true
@@ -35,7 +35,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 2 20 20"
               fill="currentColor"
-              class="h-5 w-5 text-white inline-block"
+              class="h-5 w-5 text-white inline-block cursor-pointer"
             >
               <path
                 fill-rule="evenodd"
@@ -43,7 +43,7 @@
                 clip-rule="evenodd"
               />
             </svg>
-            <label class="inline-block">Add New Employee</label>
+            <label class="inline-block cursor-pointer">Add New Employee</label>
           </div>
         </div>
       </div>
@@ -54,7 +54,12 @@
         <thead>
           <tr>
             <th class="px-4 py-2">
-              <input type="checkbox" @click="selectAll" v-model="selected" />
+              <input
+                type="checkbox"
+                class="cursor-pointer"
+                @click="selectAll"
+                v-model="selected"
+              />
             </th>
             <th class="px-4 py-2">Name</th>
             <th class="px-4 py-2">Email</th>
@@ -68,6 +73,7 @@
             <td class="border px-4 py-2">
               <input
                 type="checkbox"
+                class="cursor-pointer"
                 v-model="employeeIds"
                 :value="employee.id"
                 number
@@ -85,7 +91,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  class="h-5 w-5 text-yellow-500 mr-3 inline-block"
+                  class="h-5 w-5 text-yellow-500 mr-3 inline-block cursor-pointer"
                   @click="editEmployee(idx)"
                 >
                   <path
@@ -96,7 +102,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  class="h-5 w-5 text-red-600 inline-block"
+                  class="h-5 w-5 text-red-600 inline-block cursor-pointer"
                   @click="deleteEmployee(idx)"
                 >
                   <path
